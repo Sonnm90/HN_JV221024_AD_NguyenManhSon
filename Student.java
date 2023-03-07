@@ -11,7 +11,7 @@ public class Student {
     private float markHTML;
     private float markCSS;
     private float markJAVASCRIPT;
-    private float avgMark;
+    public float avgMark;
 
     public Student() {
     }
@@ -198,7 +198,6 @@ public class Student {
 
     public void display() {
         int today = Year.now().getValue();
-
         System.out.printf("%s%-20s%s%s", "Mã sinh viên: ", studentId, "Tên sinh viên: ", studentName);
         System.out.printf("%s%-24d%s%-20s%s%s", "\nNăm sinh: ", (today - age), "Giới tính: ", sex, "Điện thoại: ", phone);
         System.out.printf("%s%-56s%s%f", "\nĐịa chỉ: ", address, "Điểm TB: ", calAvgMark());
@@ -206,8 +205,8 @@ public class Student {
     }
 
     public float calAvgMark() {
-        float avgMark=(markHTML+markCSS+markJAVASCRIPT*2)/4;
-       return avgMark;
-
+        float avgMark = (markHTML + markCSS + markJAVASCRIPT * 2) / 4;
+        this.avgMark = avgMark;
+return avgMark;
     }
 }
