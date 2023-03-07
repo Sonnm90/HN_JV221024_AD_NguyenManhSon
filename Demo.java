@@ -70,36 +70,36 @@ public class Demo {
                     }
                     break;
                 case 5:
-                    int countNam=0,countNu=0;
+                    int countNam = 0, countNu = 0;
                     for (int i = 0; i < size; i++) {
-                        if (students[i].getSex()=="Nam") {
+                        if (students[i].getSex() == "Nam") {
                             countNam++;
                         } else {
                             countNu++;
                         }
                     }
-                    System.out.println("So sinh vien Nam là: "+countNam);
-                    System.out.println("So sinh vien Nữ là: "+countNu);
+                    System.out.println("So sinh vien Nam là: " + countNam);
+                    System.out.println("So sinh vien Nữ là: " + countNu);
                     break;
                 case 6:
                     System.out.println("Các sinh viên loại giỏi:");
                     for (int i = 0; i < size; i++) {
-                        if (students[i].calAvgMark()>=8&& students[i].calAvgMark()<=9) {
+                        if (students[i].calAvgMark() >= 8 && students[i].calAvgMark() <= 9) {
                             students[i].display();
                         }
                     }
                     System.out.println("Các sinh viên loại khá:");
 
                     for (int i = 0; i < size; i++) {
-                        if (students[i].calAvgMark()>=5&& students[i].calAvgMark()<=7) {
+                        if (students[i].calAvgMark() >= 5 && students[i].calAvgMark() <= 7) {
                             students[i].display();
                         }
                     }
 
                     break;
                 case 7:
-
-                    System.exit(0);
+                    cont = false;
+//                    System.exit(0);
 
 
             }
