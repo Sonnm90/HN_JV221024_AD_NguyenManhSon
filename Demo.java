@@ -11,6 +11,7 @@ public class Demo {
 
 
         do {
+            System.out.println();
             System.out.println("****************HACKATHON-JAVA-BASIC-1-MENU***************");
             System.out.println();
             System.out.println("1. Nhập số sinh viên và nhập thông tin cho các sinh viên");
