@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Student {
     private String studentId;
-    private String studentName;
+     String studentName;
     private int age;
     private String sex;
     private String phone;
@@ -197,16 +197,17 @@ public class Student {
     }
 
     public void display() {
+        calAvgMark();
         int today = Year.now().getValue();
         System.out.printf("%s%-20s%s%s", "Mã sinh viên: ", studentId, "Tên sinh viên: ", studentName);
         System.out.printf("%s%-24d%s%-20s%s%s", "\nNăm sinh: ", (today - age), "Giới tính: ", sex, "Điện thoại: ", phone);
-        System.out.printf("%s%-56s%s%f", "\nĐịa chỉ: ", address, "Điểm TB: ", calAvgMark());
+        System.out.printf("%s%-56s%s%f", "\nĐịa chỉ: ", address, "Điểm TB: ", avgMark);
 
     }
 
-    public float calAvgMark() {
+    public void calAvgMark() {
         float avgMark = (markHTML + markCSS + markJAVASCRIPT * 2) / 4;
         this.avgMark = avgMark;
-return avgMark;
+
     }
 }

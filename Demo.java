@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
 public class Demo {
+    static int size;
     public static void main(String[] args) {
         Student[] students = new Student[200];
-        int size = 0, choice;
+
+        int  choice;
         Student student1 = new Student();
         boolean cont = true;
 
@@ -48,7 +50,7 @@ public class Demo {
                 case 3:
                     for (int i = 0; i < size - 1; i++) {
                         for (int j = 1; j < size; j++) {
-                            if (students[i].calAvgMark() > students[j].calAvgMark()) {
+                            if (students[i].avgMark > students[j].avgMark) {
                                 student1 = students[i];
                                 students[i] = students[j];
                                 students[j] = student1;
@@ -64,7 +66,7 @@ public class Demo {
                     System.out.println("Nhap vao tên SV ần tìm kiếm:");
                     String check = sc.nextLine();
                     for (int i = 0; i < size; i++) {
-                        if (students[i].getStudentName().equals(check)) {
+                        if (students[i].studentName.equals(check)) {
                             students[i].display();
                         }
                     }
@@ -84,14 +86,14 @@ public class Demo {
                 case 6:
                     System.out.println("Các sinh viên loại giỏi:");
                     for (int i = 0; i < size; i++) {
-                        if (students[i].calAvgMark() >= 8 && students[i].calAvgMark() <= 9) {
+                        if (students[i].avgMark >= 8 && students[i].avgMark <= 9) {
                             students[i].display();
                         }
                     }
                     System.out.println("Các sinh viên loại khá:");
 
                     for (int i = 0; i < size; i++) {
-                        if (students[i].calAvgMark() >= 5 && students[i].calAvgMark() <= 7) {
+                        if (students[i].avgMark >= 5 && students[i].avgMark <= 7) {
                             students[i].display();
                         }
                     }
